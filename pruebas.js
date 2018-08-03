@@ -82,6 +82,20 @@ function trianguloCompuesto2() {
     separacion(n);
     triangulo4(n);
 }
+function trianguloCompuesto3() {
+    for (i = 0; i < n; i++) {
+        for(m=4-i; m>=0; m--){
+            document.write("&nbsp");
+            document.write("&nbsp");
+        }
+        for(p=(i); p<((i*3)+1); p++){
+            document.write("*");
+        }document.write("<br/>");
+        document.write("<br/>");
+    }
+
+
+}
 
 
 
@@ -125,3 +139,8 @@ document.write("<br/>");
 document.write("Triángulo Compuesto 2");
 document.write("<br/>");
 trianguloCompuesto2();
+
+document.write("<br/>");
+document.write("Triángulo Compuesto 3");
+document.write("<br/>");
+trianguloCompuesto3();

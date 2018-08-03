@@ -38,8 +38,8 @@ function triangulo2(n) {
 }
 
 function triangulo3(n) {
-    for (i = n - 1; i > 0; i--) {
-        for (j = i, k = i; j > 0; j--, k = 4 - i) {
+    for (i = n - 1; i >= 0; i--) {
+        for (j = i, k = i; j >= 0; j--, k = 4 - i) {
             document.write("&nbsp");
             document.write("&nbsp");
         }
@@ -51,13 +51,13 @@ function triangulo3(n) {
 }
 
 function triangulo4(n) {
-    for (i = n - 1; i > 0; i--) {
+    for (i = n; i >= 0; i--) {
         k = n - i;
-        for (j = n - i; j > 0; j--) {
+        for (j = n + 1 - i; j > 0; j--) {
             document.write("&nbsp");
             document.write("&nbsp");
         }
-        for (s = i; s > 0; s--) {
+        for (s = i - 1; s >= 0; s--) {
             document.write("*");
         }
         document.write("<br/>");
@@ -65,16 +65,53 @@ function triangulo4(n) {
 }
 
 function separacion(n) {
-    for (s = 0; s < n+1; s++) {
+    for (s = 0; s < n + 1; s++) {
         document.write("*");
     }
     document.write("<br/>");
 }
 
-function trianguloCompuesto() {
+function trianguloCompuesto1() {
     triangulo1(n);
     separacion(n);
     triangulo2(n);
+}
+
+function trianguloCompuesto2() {
+    triangulo3(n);
+    separacion(n);
+    triangulo4(n);
+}
+
+function trianguloCompuesto3() {
+    for (i = 0; i < n; i++) {
+        for (m = 4 - i; m >= 0; m--) {
+            document.write("&nbsp");
+            document.write("&nbsp");
+        }
+        for (p = (i); p < ((i * 3) + 1); p++) {
+            document.write("*");
+        }
+        document.write("<br/>");
+        document.write("<br/>");
+    }
+}
+
+function trianguloCompuesto4() {
+    for (i = 0; i <= n; i++) {
+        m=(i*2)+1;
+        // j=n-0;
+        for (p = m ; p >0; p=p-2) {
+            document.write("&nbsp");
+        }
+        for (m = i-n; m <=( n - i); m++) {
+            document.write("*");
+            // document.write("&nbsp");
+        }
+        
+        document.write("<br/>");
+        document.write("<br/>");
+    }
 }
 
 
@@ -113,4 +150,19 @@ triangulo4(n);
 document.write("<br/>");
 document.write("Triángulo Compuesto 1");
 document.write("<br/>");
-trianguloCompuesto();
+trianguloCompuesto1();
+
+document.write("<br/>");
+document.write("Triángulo Compuesto 2");
+document.write("<br/>");
+trianguloCompuesto2();
+
+document.write("<br/>");
+document.write("Triángulo Compuesto 3");
+document.write("<br/>");
+trianguloCompuesto3();
+
+document.write("<br/>");
+document.write("Triángulo Compuesto 4");
+document.write("<br/>");
+trianguloCompuesto4();

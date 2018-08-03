@@ -99,7 +99,7 @@ function trianguloCompuesto3() {
 
 function trianguloCompuesto4() {
     for (i = 0; i <= n; i++) {
-        m=(i*2)+1;
+        m=(i*3)+1;
         // j=n-0;
         for (p = m ; p >0; p=p-2) {
             document.write("&nbsp");
